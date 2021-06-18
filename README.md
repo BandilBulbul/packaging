@@ -2,6 +2,12 @@
 
 
 # Github Actions:
+
+https://brunopaz.dev/blog/building-a-basic-ci-cd-pipeline-for-a-golang-application-using-github-actions
+
+https://docs.github.com/en/actions/guides/about-continuous-integration
+
+
 GitHub Actions are based on the concept of Workflows. A workflow is nothing more than a set of jobs and steps that are executed when some condition or event is met. (Ex: a push to the repository, a pull request, a deployment, etc).
 
 ### Note: You can have multiple workflows by project, each one responding to a different set of events.
@@ -65,3 +71,24 @@ Similary in "Test" job:
           file: ./coverage.txt
 
 new thing in Test job: using a third-party action, in this case, to publish the test coverage report to CodeCov.
+
+
+About:
+Continuous integration (CI) is a software practice that requires frequently committing code to a shared repository.Frequent code updates also make it easier to merge changes from different members of a software development team. 
+When you commit code to your repository, you can continuously build and test the code to make sure that the commit doesn't introduce errors. Your tests can include code linters (which check style formatting), security checks, code coverage, functional tests, and other custom checks.
+
+Building and testing your code requires a server. You can build and test updates locally before pushing code to a repository, or you can use a CI server that checks for new code commits in a repository.
+
+## CI using GitHub Actions offers workflows that can build the code in your repository and run your tests.:
+GitHub runs your CI tests and provides the results of each test in the pull request, so you can see whether the change in your branch introduces an error. When all CI tests in a workflow pass, the changes you pushed are ready to be reviewed by a team member or merged. When a test fails, one of your changes may have caused the failure.
+
+### IFM:
+use GitHub Actions to create workflows across the full software development life cycle. For example, you can use actions to deploy, package, or release your project.
+
+### Skipping workflow runs:
+
+https://docs.github.com/en/actions/guides/about-continuous-integration#skipping-workflow-runs
+
+If you want to temporarily prevent a workflow from being triggered, you can add a skip instruction to the commit message.
+
+
